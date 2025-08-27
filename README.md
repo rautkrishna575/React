@@ -33,5 +33,10 @@ Docker needs access to your local drive for volume mounting.
 
 - **VS Code (or any editor)** → for editing your React project files.  
   - Install the **Docker extension** in VS Code if you want easy container management.  
-- **Browser** → Chrome/Edge/Firefox to preview your app.  
+- **Browser** → Chrome/Edge/Firefox to preview your app.
+
+- ---
+
+📖 **Note**  
+// Follow the `instruction.txt` file in this repository.
 
