@@ -1,0 +1,35 @@
+A. For Creating a New App existing image
+# 1. Run the Docker container (make sure you're in the root folder like D:\React\vite-docker)
+// If the error shows like the port already allocated then stop the running container
+docker run -it --rm -v "D:\React\vite-docker:/app" -p 5173:5173 vite-global
+
+
+# 2. Scaffold a new Vite + React app // set the vite globally for docker
+create-vite my-app --template react
+
+# 3. Enter the new app folder
+cd my-app
+
+# 4. Install dependencies
+//bellow command will install the node 114 packages
+npm install
+
+# 5. Start the Vite dev server
+npm run dev -- --host //so that the we can access the docker server and you can access the app using the local LAN IP
+
+
+B. For Starting an Existing App
+# 1. Run the Docker container and mount your project directory (React/vite-docker in this condition)
+//redirect to docker
+docker run -it --rm -v "D:\React\vite-docker:/app" -p 5173:5173 vite-global
+
+# 2. Inside the container, go to your app folder and start the dev server
+cd my-app
+npm run dev -- --host //so that the we can access the docker server and you can access the app using the local LAN IP
+
+
+
+C. For Creating the image
+docker build -t vite-global .
+// This will build an image named vite-global.
+Now continue the Step A.
