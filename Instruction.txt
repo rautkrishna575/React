@@ -30,6 +30,8 @@ npm run dev -- --host //so that the we can access the docker server and you can 
 
 
 C. For Creating the image
+//Keep the Dockerfile in a newfolder,run docker desktop and mount the directory then run this command
 docker build -t vite-global .
 // This will build an image named vite-global.
+
 Now continue the Step A.
